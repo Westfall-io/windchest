@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.037" timestamp="2023-11-14T08:18:28.398482" hostname="windrunner-workflow-9bprn-main-1110748337"><testcase classname="src.main" name="test_read_bool" time="0.001"><failure message="assert False">input_file = 'input.txt'
+
+    def test_read_bool(input_file='input.txt'):
+        with open(input_file, 'r') as f:
+            data = f.read()
+            data = load(data, Loader=SafeLoader)
+            with open(data['file'], 'r') as f2:
+                val = read_bool(f2)
+&gt;       assert val
+E       assert False
+
+src/main.py:21: AssertionError</failure></testcase><testcase classname="src.main" name="test_read_True" time="0.000" /><testcase classname="src.main" name="test_read_False" time="0.000" /></testsuite></testsuites>
