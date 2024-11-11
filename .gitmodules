@@ -1,0 +1,6 @@
+[submodule "windbinder"]
+	path = windbinder
+	url = git@github.com:Westfall-io/windbinder.git
+[submodule "src/windbinder"]
+	path = src/windbinder
+	url = git@github.com:Westfall-io/windbinder.git

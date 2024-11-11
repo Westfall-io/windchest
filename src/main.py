@@ -18,18 +18,8 @@
 import time
 start_time = time.time()
 
-import os
-VOLDEF = "/mnt/vol"
-VOLUME = os.environ.get("VOLUME",VOLDEF)
-WINDRUNNERHOST = os.environ.get(
-    "WINDRUNNERHOST",
-    "http://windrunner-webhook-eventsource-svc.argo-events:12000/windrunner"
-)
-
-WINDSTORMAPIHOST = os.environ.get(
-    "WINDSTORMAPIHOST",
-    "http://windstorm-api-service.windstorm:8000/"
-)
+from env import *
+from sample_action import SAMPLE_ACTION
 
 import shutil
 from datetime import datetime, timedelta
@@ -45,74 +35,21 @@ from junitparser import JUnitXml, Error, Failure
 class JUnitErrorException(Exception):
     pass
 
+from minio.login import login_minio
 
-client = Minio(
-        "storage-minio.artifacts:9000",
-        access_key="CcgP5DINKOfemEXcjYyL",
-        secret_key="YS62HYwroWYozFGoWyeZjYsmGwFLEULu047lquE6",
-        secure=False,
-    )
+def main(action=SAMPLE_ACTION, thread_execution_id=0):
+    print('Logging into minio')
+    client = login_minio()
 
-def print_files_from_git(root, level=0):
-    for entry in root:
-        print(f'{"-" * 4 * level}| {entry.path}, {entry.type}')
-        if entry.type == "tree":
-            print_files_from_git(entry, level + 1)
+    print('Logging into windstorm')
+    token = login_windstorm_api()
 
-def main(action = {
-        "id": 18,
-        "declaredName": "collectData",
-        "qualifiedName": "Requirements::Valid_Test::collectData",
-        "artifact": {
-            "id": 3,
-            "full_name": "Westfall/fortran_greaterthan",
-            "commit_url": "http://artifacts.westfall.io/Westfall/fortran_greaterthan/commit/fa8f69f17ab910a9126d9338f19dc23062887c04",
-            "ref": "main",
-            "commit": "84455bbbb558579acc17427adf06af4530ba4abb",
-            "date": "2023-10-17T17:41:36.606126"
-        },
-        "container": {
-            "id": 4,
-            "resource_url": "core.harbor.domain/fortran-containers/fortran-greaterthan:0.1.0",
-            "project": "fortran-containers",
-            "image": "fortran-greaterthan",
-            "tag": "0.1.0",
-            "digest": "a5ad39fb0bf5ea8168938c2f21cfcfb2c1addad8ad98b949a1b8a6edc5c76780",
-            "date": "2023-10-17T21:29:44.567434"
-        },
-        "variables": {
-            "var1": {
-              "value": 10,
-              "units": "u.one"
-            },
-            "var2": {
-              "value": 3,
-              "units": "u.one"
-            }
-        }
-    }, thread_execution_id=0):
     print('Updating thread execution {} status'.format(thread_execution_id))
-    r = requests.put(
-        WINDSTORMAPIHOST+"auth/update_thread/{}".format(
-            thread_execution_id
-        ), json ={'status':'windchest_1'}
-    )
-    if r.status_code != 200:
-        print('Failed to update status')
-        thread_name = ''
-    else:
-        thread_name = r.json()['name']
+    update_thread_status(token, thread_execution_id, 'windchest_1')
 
-    print('Printing all files in commit.')
-    repo2 = git.Repo(VOLUME)
-    t = repo2.head.commit.tree
-    print_files_from_git(t)
-
-    print('Adding all new files since last commit.')
-    repo2.git.add(all=True)
-
-    print('Finding all changed files.')
-    files = [item.a_path for item in repo2.index.diff('HEAD')]
+    print('\n'+'-'*20)
+    print('Finding modified files')
+    files = get_modified_files()
 
     print('Making temporary directory for changed files.')
     if not os.path.exists('/tmp'):
@@ -258,14 +195,7 @@ def main(action = {
     print('Complete.')
 
     print('Updating thread execution {} status'.format(thread_execution_id))
-    r = requests.put(
-        WINDSTORMAPIHOST+"auth/update_thread/{}".format(
-            thread_execution_id
-        ), json ={'status':'windchest_2'}
-    )
-    if r.status_code != 200:
-        print('Failed to update status')
-    return
+    update_thread_status(token, thread_execution_id, 'windchest_2')
 
 if __name__ == "__main__":
     os.mkdir('tmp')
