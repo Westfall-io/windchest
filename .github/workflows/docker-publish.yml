@@ -38,6 +38,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: true
+      - name: Git Submodule Update
+        run: |
+          git pull --recurse-submodules
+          git submodule update --remote --recursive
       - name: Python Semantic Release 📦 to PyPI
         id: release
         uses: python-semantic-release/python-semantic-release@v9.8.5

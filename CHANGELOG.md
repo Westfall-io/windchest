@@ -10,4 +10,4 @@
 
 * :page_facing_up: Updates to license ([`fd5a314`](https://github.com/Westfall-io/windchest/commit/fd5a314bc7525dd0a2148e7328cb7c1bd81c249d))
 
-* Initial commit ([`b66be25`](https://github.com/Westfall-io/windchest/commit/b66be25062b6fb487c8463037ad22d6e2a15b30e))
+* :tada: Initial commit ([`b66be25`](https://github.com/Westfall-io/windchest/commit/b66be25062b6fb487c8463037ad22d6e2a15b30e))
