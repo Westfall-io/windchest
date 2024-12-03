@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.2 (2024-12-03)
+
+### :bug:
+
+* :bug: Fixed an issue with incorrect function name ([`85f8b50`](https://github.com/Westfall-io/windchest/commit/85f8b504b27e34ca431d14e75e00b793493d3ddc))
+
 ## v0.0.1 (2024-12-03)
 
 ### :bug:
