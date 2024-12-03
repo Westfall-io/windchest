@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.3 (2024-12-03)
+
+### :bug:
+
+* :bug: Adding dependency to jinja2 ([`f063e37`](https://github.com/Westfall-io/windchest/commit/f063e37de41818b570b3469e80ece0edf73a3b17))
+
 ## v0.0.2 (2024-12-03)
 
 ### :bug:
