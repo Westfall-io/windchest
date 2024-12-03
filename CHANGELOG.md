@@ -1,8 +1,12 @@
 # CHANGELOG
 
+## v0.0.4 (2024-12-03)
+
 ## v0.0.3 (2024-12-03)
 
 ### :bug:
+
+* :bug: Fixed an issue where an import was missing ([`74c1113`](https://github.com/Westfall-io/windchest/commit/74c1113ed13ff095f84acf81d2d439f00b8f38e7))
 
 * :bug: Adding dependency to jinja2 ([`f063e37`](https://github.com/Westfall-io/windchest/commit/f063e37de41818b570b3469e80ece0edf73a3b17))
 
