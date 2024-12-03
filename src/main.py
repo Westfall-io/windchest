@@ -22,7 +22,7 @@ from windbinder.sample_action import SAMPLE_ACTION
 from windbinder.minio.login import login_minio
 from windbinder.windstorm.authentication import login_windstorm_api, \
     update_thread_status
-from windbinder.git.repo import get_modified_files
+from windbinder.git.repo import git_configure
 from windbinder.windstorm.thread import update_verification, \
     find_dependent_tasks_by_id, execute_dependent_thread
 
@@ -38,7 +38,7 @@ def main(action=SAMPLE_ACTION, thread_execution_id=0):
 
     print('\n'+'-'*20)
     print('Finding modified files')
-    files = get_modified_files()
+    files = git_configure()
 
     print('Making temporary directory for changed files.')
     if not os.path.exists('/tmp'):
