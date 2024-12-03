@@ -20,10 +20,10 @@ start_time = time.time()
 
 from windbinder.sample_action import SAMPLE_ACTION
 from windbinder.minio.login import login_minio
-from windbinder.windstorm.authentication import login_windstorm_api,
+from windbinder.windstorm.authentication import login_windstorm_api, \
     update_thread_status
 from windbinder.git.repo import get_modified_files
-from windbinder.windstorm.thread import update_verification,
+from windbinder.windstorm.thread import update_verification, \
     find_dependent_tasks_by_id, execute_dependent_thread
 
 def main(action=SAMPLE_ACTION, thread_execution_id=0):
@@ -51,7 +51,7 @@ def main(action=SAMPLE_ACTION, thread_execution_id=0):
     update_verification(action['verifications_id'], error)
 
     print('Collecting all changed files for storage')
-    create_bucket(client, action, name='output', tmp_location='/tmp/digitalforge')
+    create_bucket(client, action, thread_name, name='output', tmp_location='/tmp/digitalforge')
 
     action2 = find_dependent_tasks_by_id(token, action)
     if isinstance(action2, dict):
