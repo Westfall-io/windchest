@@ -14,9 +14,12 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 import time
 start_time = time.time()
+
+from env import *
+
+import os
 
 from windbinder.sample_action import SAMPLE_ACTION
 from windbinder.minio.login import login_minio

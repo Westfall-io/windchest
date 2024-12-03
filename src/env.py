@@ -15,5 +15,5 @@ WINDSTORMAPIHOST = os.environ.get(
 
 ## MINIO VALUES
 MINIOHOST = os.environ.get("MINIOHOST","storage-minio.artifacts:9000")
-MINIOUSER = os.environ.get("MINIOUSER","CcgP5DINKOfemEXcjYyL")
-MINIOTOKEN = os.environ.get("MINIOUSER","YS62HYwroWYozFGoWyeZjYsmGwFLEULu047lquE6")
+MINIOUSER = os.environ.get("MINIOUSER","")
+MINIOTOKEN = os.environ.get("MINIOUSER","")
