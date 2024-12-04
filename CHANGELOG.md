@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.11 (2024-12-04)
+
+### :bug:
+
+* :bug: Adding authentication to thread update call ([`5e151b7`](https://github.com/Westfall-io/windchest/commit/5e151b7f6a53e779950158ba8feaa0b224cb3b56))
+
 ## v0.0.10 (2024-12-04)
 
 ### :bug:
