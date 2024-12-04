@@ -52,6 +52,8 @@ def main(action=SAMPLE_ACTION, thread_execution_id=0):
 
     print('Copying all changed files to temporary directory.')
     error = check_files(files)
+    if error is None:
+        error = True # Nothing tells us it was verified
     update_verification(token, action['verifications_id'], error)
 
     print('Collecting all changed files for storage')
