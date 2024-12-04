@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.6 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed more import errors ([`d4fc651`](https://github.com/Westfall-io/windchest/commit/d4fc65149ce5d8398f326193130761c68deb2358))
+
 ## v0.0.5 (2024-12-04)
 
 ### :bug:
