@@ -24,11 +24,10 @@ import os
 from windbinder.sample_action import SAMPLE_ACTION
 from windbinder.minio.login import login_minio
 from windbinder.minio.bucket import create_bucket
-from windbinder.windstorm.authentication import login_windstorm_api, \
-    update_thread_status
+from windbinder.windstorm.authentication import login_windstorm_api
 from windbinder.git.repo import git_configure
 from windbinder.windstorm.thread import update_verification, \
-    find_dependent_tasks_by_id, execute_dependent_thread
+    find_dependent_tasks_by_id, execute_dependent_thread, update_thread_status
 from windbinder.junit.files import check_files
 
 def main(action=SAMPLE_ACTION, thread_execution_id=0):
@@ -53,7 +52,7 @@ def main(action=SAMPLE_ACTION, thread_execution_id=0):
 
     print('Copying all changed files to temporary directory.')
     error = check_files(files)
-    update_verification(action['verifications_id'], error)
+    update_verification(token, action['verifications_id'], error)
 
     print('Collecting all changed files for storage')
     create_bucket(client, action, thread_name, name='output', tmp_location='/tmp/digitalforge')
