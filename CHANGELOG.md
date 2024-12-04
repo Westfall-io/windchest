@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.16 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed a missing comma ([`0184fea`](https://github.com/Westfall-io/windchest/commit/0184fea32e34d5da9d3f8e27a0020d6f16890eb9))
+
 ## v0.0.15 (2024-12-04)
 
 ### :bug:
