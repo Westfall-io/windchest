@@ -23,11 +23,13 @@ import os
 
 from windbinder.sample_action import SAMPLE_ACTION
 from windbinder.minio.login import login_minio
+from windbinder.minio.bucket import create_bucket
 from windbinder.windstorm.authentication import login_windstorm_api, \
     update_thread_status
 from windbinder.git.repo import git_configure
 from windbinder.windstorm.thread import update_verification, \
     find_dependent_tasks_by_id, execute_dependent_thread
+from windbinder.junit.files import check_files
 
 def main(action=SAMPLE_ACTION, thread_execution_id=0):
     print('Logging into minio')
