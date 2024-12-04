@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.17 (2024-12-04)
+
+### :zap:
+
+* :zap: Splitting individual minio error sources ([`1157265`](https://github.com/Westfall-io/windchest/commit/11572659be077e64def80243e9a9bf64c7f41f63))
+
 ## v0.0.16 (2024-12-04)
 
 ### :bug:
