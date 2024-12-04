@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.19 (2024-12-04)
+
+### :bug:
+
+* :bug: Adding more debug to empty output zip ([`40e696a`](https://github.com/Westfall-io/windchest/commit/40e696ac1a0fa219fb6c2a74341c27cb3dab8e7e))
+
 ## v0.0.18 (2024-12-04)
 
 ### :bug:
