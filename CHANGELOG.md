@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.13 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue with authentication headers to windstorm api ([`93f26ad`](https://github.com/Westfall-io/windchest/commit/93f26ad15493be50a60d88372d957070fa14ec73))
+
 ## v0.0.12 (2024-12-04)
 
 ### :bug:
