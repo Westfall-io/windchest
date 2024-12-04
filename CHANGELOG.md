@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.25 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue where the wrong value was passed to the xml parsing function ([`3e5fbfd`](https://github.com/Westfall-io/windchest/commit/3e5fbfda8b96d2511d7d6ce05cf977056b247e09))
+
 ## v0.0.24 (2024-12-04)
 
 ### :bug:
