@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.21 (2024-12-04)
+
+### :bug:
+
+* :bug: Adding more directory output for debug ([`88de627`](https://github.com/Westfall-io/windchest/commit/88de627ec35dc4dfbc79655d5e94a0ff5bf42efa))
+
 ## v0.0.20 (2024-12-04)
 
 ### :bug:
