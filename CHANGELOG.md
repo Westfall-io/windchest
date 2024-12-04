@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.9 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue with an unbound variable case ([`396508e`](https://github.com/Westfall-io/windchest/commit/396508e8d308056b66a8df891b31ac42e5151f6c))
+
 ## v0.0.8 (2024-12-04)
 
 ### :bug:
