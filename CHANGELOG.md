@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.26 (2024-12-04)
+
+### :bug:
+
+* :bug: Adding debug for verification put request ([`61d553c`](https://github.com/Westfall-io/windchest/commit/61d553c56ddbb14f0f018c1693e01a19a06827dc))
+
 ## v0.0.25 (2024-12-04)
 
 ### :bug:
