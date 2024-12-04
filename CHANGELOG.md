@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.12 (2024-12-04)
+
+### :bug:
+
+* :bug: Adding debug for access token issue ([`e34034f`](https://github.com/Westfall-io/windchest/commit/e34034f9bea0ca878445e2542a5087041207dae4))
+
 ## v0.0.11 (2024-12-04)
 
 ### :bug:
