@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.8 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue with a misplaced continue ([`0836ea3`](https://github.com/Westfall-io/windchest/commit/0836ea3eb8575186febf419771cd604fd3c59bf1))
+
 ## v0.0.7 (2024-12-04)
 
 ### :bug:

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "windchest"
-version = "0.0.7"
+version = "0.0.8"
 description = "Post-container data collection and storage"
 authors = ["Christopher Cox"]
 license = "MIT"
@@ -61,7 +61,7 @@ patch_tags = [
 
 [project]
 name = "windchest"
-version = "0.0.7"
+version = "0.0.8"
 authors = [
   { name="Christopher Cox", email="chris.cox@westfall.io" },
 ]
