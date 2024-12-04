@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.18 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue where the wrong environment variable was being passed ([`4ffab1c`](https://github.com/Westfall-io/windchest/commit/4ffab1c0d416d69052b8a9a2e29b5cc20d4c0b08))
+
 ## v0.0.17 (2024-12-04)
 
 ### :zap:
