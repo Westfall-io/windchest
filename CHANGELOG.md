@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.23 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue with a missing import ([`443a679`](https://github.com/Westfall-io/windchest/commit/443a6799bdc8cc87c4ca173b4590188188ce65a9))
+
 ## v0.0.22 (2024-12-04)
 
 ### :bug:
