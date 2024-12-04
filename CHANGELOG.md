@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.10 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue where the zip file could not be uploaded ([`d2c7280`](https://github.com/Westfall-io/windchest/commit/d2c728031e4484466189710d4d48ff9f7f5c21dd))
+
 ## v0.0.9 (2024-12-04)
 
 ### :bug:
