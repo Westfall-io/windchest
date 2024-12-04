@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.15 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue with missing token ([`010faf4`](https://github.com/Westfall-io/windchest/commit/010faf40b65dab3491ce06d207f6ae5d2748c1a1))
+
 ## v0.0.14 (2024-12-04)
 
 ### :bug:
