@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.27 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue where an error response would be overwritten by a new file ([`5d641d0`](https://github.com/Westfall-io/windchest/commit/5d641d02cac769cbd9d3c9af5eca8d9a699ef769))
+
 ## v0.0.26 (2024-12-04)
 
 ### :bug:
