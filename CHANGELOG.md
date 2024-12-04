@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.24 (2024-12-04)
+
+### :bug:
+
+* :bug: Fixed an issue with a missing environment variable ([`3b44d57`](https://github.com/Westfall-io/windchest/commit/3b44d577c4b6ad36d68f45bf4b5477e2de8e9165))
+
 ## v0.0.23 (2024-12-04)
 
 ### :bug:
