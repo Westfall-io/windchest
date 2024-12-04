@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.0.20 (2024-12-04)
+
+### :bug:
+
+* :bug: Adding debug for files zipped ([`ed32df4`](https://github.com/Westfall-io/windchest/commit/ed32df42254a7577a41a7b0c8ddebb022e09c972))
+
 ## v0.0.19 (2024-12-04)
 
 ### :bug:
