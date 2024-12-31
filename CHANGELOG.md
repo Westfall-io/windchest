@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.2.0 (2024-12-31)
+
+### :sparkles:
+
+* :sparkles: Migrating from minikube version to fully hosted k8s ([`0ab6b55`](https://github.com/Westfall-io/windchest/commit/0ab6b556577d2dcfa5e81184b7d80ecb5ae9e442))
+
 ## v0.1.0 (2024-12-31)
 
 ### :sparkles:
