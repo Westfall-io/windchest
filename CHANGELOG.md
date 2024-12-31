@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.1.0 (2024-12-31)
+
+### :sparkles:
+
+* :sparkles: Support for minikube ([`59b9d1b`](https://github.com/Westfall-io/windchest/commit/59b9d1b2da3e5dc5ec65f79b4bb03ba46c997ca6))
+
 ## v0.0.28 (2024-12-04)
 
 ### :bug:
