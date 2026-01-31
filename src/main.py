@@ -14,6 +14,21 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
+Windchest entrypoint and orchestration.
+
+This module coordinates the Windchest workflow:
+- log into MinIO and Windstorm APIs
+- update thread execution status in Windstorm
+- discover changed files from the Git repository
+- verify changed files using JUnit checks
+- upload verification artifacts to MinIO
+- trigger dependent tasks/threads when present
+
+The `main` function below implements the flow and is exposed to
+`fire` for CLI invocation.
+"""
+
 import time
 start_time = time.time()
 
@@ -31,6 +46,18 @@ from windbinder.windstorm.thread import update_verification, \
 from windbinder.junit.files import check_files
 
 def main(action=SAMPLE_ACTION, thread_execution_id=0):
+    """Execute the Windchest workflow.
+
+    This function performs the end-to-end orchestration for a single
+    Windchest action: logging into services, updating thread status,
+    discovering changed files, running verifications, uploading
+    artifacts to MinIO, and triggering dependent tasks.
+
+    Args:
+        action (dict): action payload describing verifications and metadata (defaults to `SAMPLE_ACTION`).
+        thread_execution_id (int): thread execution identifier for status updates.
+    """
+    # Log into services and perform the verification/upload flow
     print('Logging into minio')
     client = login_minio()
 
